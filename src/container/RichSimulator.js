@@ -28,7 +28,7 @@ import IconButton from '@material-ui/core/IconButton';
 class RichSimulator extends React.Component {
   constructor(props) {
     super(props);
-    const money = 270000000000
+    const money = 27000000000000000000000000000000000
 
     this.items = require('../static/goods.json')['items'];
     this.items.sort((a, b) => a.price - b.price)
