@@ -102,6 +102,7 @@ class RichSimulator extends React.Component {
     if (event.target.checked) {
       this.yuebaoInterval = setInterval(() => {
         // Your custom logic here
+        const interestRate = 1
         this.makeProfit()
       }, this.delay);
     } else {
