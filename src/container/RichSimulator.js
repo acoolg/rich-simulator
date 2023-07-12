@@ -102,7 +102,12 @@ class RichSimulator extends React.Component {
     if (event.target.checked) {
       this.yuebaoInterval = setInterval(() => {
         // Your custom logic here
-        const interestRate = 1
+        const interestRate = 10; // 新的利率，您可以根據需要修改這個值
+    const pps = Math.floor(this.state.balance * interestRate);
+    this.setState({ balance: this.state.balance + pps, profitPerSec: pps, money: this.state.money + pps });
+  }, this.delay);
+} else {
+  clearInterval(this.yuebaoInterval)
         this.makeProfit()
       }, this.delay);
     } else {
